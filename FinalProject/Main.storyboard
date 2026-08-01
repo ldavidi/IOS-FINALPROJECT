@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NAV-ROOT">
+    <device id="retina6_3" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="SCN-NAV">
+            <objects>
+                <navigationController id="NAV-ROOT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NAV-BAR">
+                        <rect key="frame" x="0.0" y="124" width="402" height="54"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="LOGIN-VC" kind="relationship" relationship="rootViewController" id="SEG-NAV-LOGIN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-NAV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="131"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="SCN-LOGIN">
+            <objects>
+                <viewController storyboardIdentifier="LoginVC" id="LOGIN-VC" customClass="LoginViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LOGIN-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-SCROLL">
+                                <rect key="frame" x="20" y="198" width="362" height="588"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-STACK">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="460.33333333333331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="כניסה לחשבון" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-TITLE">
+                                                <rect key="frame" x="0.0" y="0.0" width="362" height="33.666666666666664"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="שם" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-NAME-LABEL">
+                                                <rect key="frame" x="0.0" y="47.666666666666657" width="362" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="שם מלא" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-NAME">
+                                                <rect key="frame" x="0.0" y="82" width="362" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="טלפון" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-PHONE-LABEL">
+                                                <rect key="frame" x="0.0" y="130" width="362" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="טלפון" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-PHONE">
+                                                <rect key="frame" x="0.0" y="164.33333333333331" width="362" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="אימייל" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-EMAIL">
+                                                <rect key="frame" x="0.0" y="212.33333333333331" width="362" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="סיסמה" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-PASSWORD">
+                                                <rect key="frame" x="0.0" y="260.33333333333331" width="362" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-ACTION">
+                                                <rect key="frame" x="0.0" y="308.33333333333331" width="362" height="30"/>
+                                                <state key="normal" title="כניסה"/>
+                                                <connections>
+                                                    <action selector="actionButtonTapped:" destination="LOGIN-VC" eventType="touchUpInside" id="ACT-LOGIN"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-TOGGLE">
+                                                <rect key="frame" x="0.0" y="352.33333333333337" width="362" height="30"/>
+                                                <state key="normal" title="אין לך חשבון? הרשם כאן"/>
+                                                <connections>
+                                                    <action selector="toggleModeButtonTapped:" destination="LOGIN-VC" eventType="touchUpInside" id="ACT-TOGGLE"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-FORGOT">
+                                                <rect key="frame" x="0.0" y="396.33333333333337" width="362" height="30"/>
+                                                <state key="normal" title="שכחתי סיסמה"/>
+                                                <connections>
+                                                    <action selector="forgotPasswordTapped:" destination="LOGIN-VC" eventType="touchUpInside" id="ACT-FORGOT"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="LOGIN-SPINNER">
+                                                <rect key="frame" x="0.0" y="440.33333333333337" width="362" height="20"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="LOGIN-STACK" firstAttribute="bottom" secondItem="LOGIN-SCROLL" secondAttribute="bottom" id="C-LS-B"/>
+                                    <constraint firstItem="LOGIN-STACK" firstAttribute="leading" secondItem="LOGIN-SCROLL" secondAttribute="leading" id="C-LS-L"/>
+                                    <constraint firstItem="LOGIN-STACK" firstAttribute="trailing" secondItem="LOGIN-SCROLL" secondAttribute="trailing" id="C-LS-R"/>
+                                    <constraint firstItem="LOGIN-STACK" firstAttribute="top" secondItem="LOGIN-SCROLL" secondAttribute="top" id="C-LS-T"/>
+                                    <constraint firstItem="LOGIN-STACK" firstAttribute="width" secondItem="LOGIN-SCROLL" secondAttribute="width" id="C-LS-W"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LOGIN-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LOGIN-SAFE" firstAttribute="bottom" secondItem="LOGIN-SCROLL" secondAttribute="bottom" constant="20" id="C-L-B"/>
+                            <constraint firstItem="LOGIN-SCROLL" firstAttribute="leading" secondItem="LOGIN-SAFE" secondAttribute="leading" constant="20" id="C-L-L"/>
+                            <constraint firstItem="LOGIN-SAFE" firstAttribute="trailing" secondItem="LOGIN-SCROLL" secondAttribute="trailing" constant="20" id="C-L-R"/>
+                            <constraint firstItem="LOGIN-SCROLL" firstAttribute="top" secondItem="LOGIN-SAFE" secondAttribute="top" constant="20" id="C-L-T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LOGIN-NAV"/>
+                    <connections>
+                        <outlet property="actionButton" destination="LOGIN-ACTION" id="OUT-L-A"/>
+                        <outlet property="activityIndicator" destination="LOGIN-SPINNER" id="OUT-L-S"/>
+                        <outlet property="emailTextField" destination="LOGIN-EMAIL" id="OUT-L-E"/>
+                        <outlet property="forgotPasswordButton" destination="LOGIN-FORGOT" id="OUT-L-F"/>
+                        <outlet property="nameLabel" destination="LOGIN-NAME-LABEL" id="OUT-L-NL"/>
+                        <outlet property="nameTextField" destination="LOGIN-NAME" id="OUT-L-N"/>
+                        <outlet property="passwordTextField" destination="LOGIN-PASSWORD" id="OUT-L-PW"/>
+                        <outlet property="phoneLabel" destination="LOGIN-PHONE-LABEL" id="OUT-L-PL"/>
+                        <outlet property="phoneTextField" destination="LOGIN-PHONE" id="OUT-L-P"/>
+                        <outlet property="titleLabel" destination="LOGIN-TITLE" id="OUT-L-T"/>
+                        <outlet property="toggleButton" destination="LOGIN-TOGGLE" id="OUT-L-TG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-LOGIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="131"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="SCN-HOME">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" id="HOME-VC" customClass="HomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HOME-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="HOME-STACK">
+                                <rect key="frame" x="20" y="144" width="362" height="663"/>
+                                <subviews>
+                                    <label contentMode="scaleToFill" text="ברוך הבא" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOME-WELCOME">
+                                        <rect key="frame" x="0.0" y="0.0" width="362" height="28.666666666666668"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="HOME-HERO">
+                                        <rect key="frame" x="0.0" y="42.666666666666657" width="362" height="180"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="180" id="C-HERO-H"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOME-BOOK">
+                                        <rect key="frame" x="0.0" y="236.66666666666669" width="362" height="30"/>
+                                        <state key="normal" title="לחץ לקביעת תור"/>
+                                        <connections>
+                                            <action selector="bookButtonTapped:" destination="HOME-VC" eventType="touchUpInside" id="ACT-H-BOOK"/>
+                                        </connections>
+                                    </button>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOME-MY">
+                                        <rect key="frame" x="0.0" y="280.66666666666669" width="362" height="30"/>
+                                        <state key="normal" title="התורים שלי"/>
+                                        <connections>
+                                            <action selector="myAppointmentsTapped:" destination="HOME-VC" eventType="touchUpInside" id="ACT-H-MY"/>
+                                        </connections>
+                                    </button>
+                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOME-ADMIN">
+                                        <rect key="frame" x="0.0" y="324.66666666666669" width="362" height="30"/>
+                                        <state key="normal" title="ניהול תורים"/>
+                                        <connections>
+                                            <action selector="adminButtonTapped:" destination="HOME-VC" eventType="touchUpInside" id="ACT-H-ADMIN"/>
+                                        </connections>
+                                    </button>
+                                    <label contentMode="scaleToFill" text="אין תורים קרובים" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOME-EMPTY">
+                                        <rect key="frame" x="0.0" y="368.66666666666663" width="362" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="HOME-TABLE">
+                                        <rect key="frame" x="0.0" y="403" width="362" height="260"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="260" id="C-H-TBL-H"/>
+                                        </constraints>
+                                    </tableView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HOME-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HOME-STACK" firstAttribute="leading" secondItem="HOME-SAFE" secondAttribute="leading" constant="20" id="C-H-L"/>
+                            <constraint firstItem="HOME-SAFE" firstAttribute="trailing" secondItem="HOME-STACK" secondAttribute="trailing" constant="20" id="C-H-R"/>
+                            <constraint firstItem="HOME-STACK" firstAttribute="top" secondItem="HOME-SAFE" secondAttribute="top" constant="20" id="C-H-T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="HOME-NAV"/>
+                    <connections>
+                        <outlet property="adminButton" destination="HOME-ADMIN" id="OUT-H-A"/>
+                        <outlet property="appointmentsTableView" destination="HOME-TABLE" id="OUT-H-T"/>
+                        <outlet property="bookButton" destination="HOME-BOOK" id="OUT-H-B"/>
+                        <outlet property="emptyStateLabel" destination="HOME-EMPTY" id="OUT-H-E"/>
+                        <outlet property="heroImageView" destination="HOME-HERO" id="OUT-H-I"/>
+                        <outlet property="myAppointmentsButton" destination="HOME-MY" id="OUT-H-M"/>
+                        <outlet property="welcomeLabel" destination="HOME-WELCOME" id="OUT-H-W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-HOME" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="131"/>
+        </scene>
+        <!--קביעת תור-->
+        <scene sceneID="SCN-BOOK">
+            <objects>
+                <viewController storyboardIdentifier="BookingVC" id="BOOK-VC" customClass="BookingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BOOK-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-SCROLL">
+                                <rect key="frame" x="16" y="136" width="370" height="658"/>
+                                <subviews>
+                                    <stackView contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-STACK">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="1724.3333333333333"/>
+                                        <subviews>
+                                            <stackView contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MONTH-ROW">
+                                                <rect key="frame" x="0.0" y="0.0" width="370" height="30"/>
+                                                <subviews>
+                                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-PREV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
+                                                        <state key="normal" title="‹"/>
+                                                        <connections>
+                                                            <action selector="prevMonthTapped:" destination="BOOK-VC" eventType="touchUpInside" id="ACT-B-PREV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <label contentMode="scaleToFill" text="חודש" textAlignment="center" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-MONTH">
+                                                        <rect key="frame" x="126" y="0.0" width="118" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    </label>
+                                                    <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-NEXT">
+                                                        <rect key="frame" x="252" y="0.0" width="118" height="30"/>
+                                                        <state key="normal" title="›"/>
+                                                        <connections>
+                                                            <action selector="nextMonthTapped:" destination="BOOK-VC" eventType="touchUpInside" id="ACT-B-NEXT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-CALENDAR">
+                                                <rect key="frame" x="0.0" y="42" width="370" height="320"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="320" id="C-BC-H"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="4" minimumInteritemSpacing="0.0" id="LAY-CAL">
+                                                    <size key="itemSize" width="44" height="44"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                            </collectionView>
+                                            <label contentMode="scaleToFill" text="בחר תאריך" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-DATE">
+                                                <rect key="frame" x="0.0" y="374" width="370" height="20.333333333333314"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            </label>
+                                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-SLOTS">
+                                                <rect key="frame" x="0.0" y="406.33333333333337" width="370" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="C-BS-H"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="LAY-SLOT">
+                                                    <size key="itemSize" width="80" height="44"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                            </collectionView>
+                                            <label contentMode="scaleToFill" text="" textAlignment="right" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-TIME">
+                                                <rect key="frame" x="0.0" y="488.33333333333337" width="370" height="1000.0000000000001"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            </label>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-PICKER">
+                                                <rect key="frame" x="0.0" y="1500.3333333333333" width="370" height="150"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="150" id="C-BP-H"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-CONFIRM">
+                                                <rect key="frame" x="0.0" y="1662.3333333333333" width="370" height="30"/>
+                                                <state key="normal" title="אישור תור"/>
+                                                <connections>
+                                                    <action selector="confirmButtonTapped:" destination="BOOK-VC" eventType="touchUpInside" id="ACT-B-CONF"/>
+                                                </connections>
+                                            </button>
+                                            <activityIndicatorView contentMode="scaleToFill" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="BOOK-SPINNER">
+                                                <rect key="frame" x="0.0" y="1704.3333333333333" width="370" height="20"/>
+                                            </activityIndicatorView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="BOOK-STACK" firstAttribute="bottom" secondItem="BOOK-SCROLL" secondAttribute="bottom" id="C-BSB"/>
+                                    <constraint firstItem="BOOK-STACK" firstAttribute="leading" secondItem="BOOK-SCROLL" secondAttribute="leading" id="C-BSL"/>
+                                    <constraint firstItem="BOOK-STACK" firstAttribute="trailing" secondItem="BOOK-SCROLL" secondAttribute="trailing" id="C-BSR"/>
+                                    <constraint firstItem="BOOK-STACK" firstAttribute="top" secondItem="BOOK-SCROLL" secondAttribute="top" id="C-BST"/>
+                                    <constraint firstItem="BOOK-STACK" firstAttribute="width" secondItem="BOOK-SCROLL" secondAttribute="width" id="C-BSW"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BOOK-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BOOK-SAFE" firstAttribute="bottom" secondItem="BOOK-SCROLL" secondAttribute="bottom" constant="12" id="C-B-B"/>
+                            <constraint firstItem="BOOK-SCROLL" firstAttribute="leading" secondItem="BOOK-SAFE" secondAttribute="leading" constant="16" id="C-B-L"/>
+                            <constraint firstItem="BOOK-SAFE" firstAttribute="trailing" secondItem="BOOK-SCROLL" secondAttribute="trailing" constant="16" id="C-B-R"/>
+                            <constraint firstItem="BOOK-SCROLL" firstAttribute="top" secondItem="BOOK-SAFE" secondAttribute="top" constant="12" id="C-B-T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="קביעת תור" id="BOOK-NAV"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="BOOK-SPINNER" id="OUT-B-SPIN"/>
+                        <outlet property="calendarCollectionView" destination="BOOK-CALENDAR" id="OUT-B-CAL"/>
+                        <outlet property="confirmButton" destination="BOOK-CONFIRM" id="OUT-B-CONF"/>
+                        <outlet property="monthLabel" destination="BOOK-MONTH" id="OUT-B-M"/>
+                        <outlet property="nextMonthButton" destination="BOOK-NEXT" id="OUT-B-NEXT"/>
+                        <outlet property="prevMonthButton" destination="BOOK-PREV" id="OUT-B-PREV"/>
+                        <outlet property="selectedDateLabel" destination="BOOK-DATE" id="OUT-B-DATE"/>
+                        <outlet property="selectedTimeLabel" destination="BOOK-TIME" id="OUT-B-TIME"/>
+                        <outlet property="servicePickerView" destination="BOOK-PICKER" id="OUT-B-PICK"/>
+                        <outlet property="timeSlotsCollectionView" destination="BOOK-SLOTS" id="OUT-B-SLOTS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-BOOK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="131"/>
+        </scene>
+        <!--התורים שלי-->
+        <scene sceneID="SCN-MY">
+            <objects>
+                <viewController storyboardIdentifier="MyAppointmentsVC" id="MY-VC" customClass="MyAppointmentsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MY-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="MY-TABLE">
+                                <rect key="frame" x="0.0" y="124" width="402" height="682"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MY-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MY-SAFE" firstAttribute="bottom" secondItem="MY-TABLE" secondAttribute="bottom" id="C-MY-B"/>
+                            <constraint firstItem="MY-TABLE" firstAttribute="leading" secondItem="MY-SAFE" secondAttribute="leading" id="C-MY-L"/>
+                            <constraint firstItem="MY-SAFE" firstAttribute="trailing" secondItem="MY-TABLE" secondAttribute="trailing" id="C-MY-R"/>
+                            <constraint firstItem="MY-TABLE" firstAttribute="top" secondItem="MY-SAFE" secondAttribute="top" id="C-MY-T"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="התורים שלי" id="MY-NAV"/>
+                    <connections>
+                        <outlet property="tableView" destination="MY-TABLE" id="OUT-MY-T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-MY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="131"/>
+        </scene>
+        <!--ניהול תורים-->
+        <scene sceneID="SCN-ADMIN">
+            <objects>
+                <viewController storyboardIdentifier="AdminVC" id="ADMIN-VC" customClass="AdminViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ADMIN-VIEW">
+                        <rect key="frame" x="0.0" y="0.0" width="402" height="874"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ADMIN-SEG">
+                                <rect key="frame" x="16" y="136" width="370" height="32"/>
+                                <segments>
+                                    <segment title="הכל"/>
+                                    <segment title="היום"/>
+                                    <segment title="ממתינים"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentChanged:" destination="ADMIN-VC" eventType="valueChanged" id="ACT-A-SEG"/>
+                                </connections>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ADMIN-TABLE">
+                                <rect key="frame" x="0.0" y="179" width="402" height="627"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ADMIN-SAFE"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ADMIN-SEG" firstAttribute="leading" secondItem="ADMIN-SAFE" secondAttribute="leading" constant="16" id="C-A-SL"/>
+                            <constraint firstItem="ADMIN-SAFE" firstAttribute="trailing" secondItem="ADMIN-SEG" secondAttribute="trailing" constant="16" id="C-A-SR"/>
+                            <constraint firstItem="ADMIN-SEG" firstAttribute="top" secondItem="ADMIN-SAFE" secondAttribute="top" constant="12" id="C-A-ST"/>
+                            <constraint firstItem="ADMIN-SAFE" firstAttribute="bottom" secondItem="ADMIN-TABLE" secondAttribute="bottom" id="C-A-TB"/>
+                            <constraint firstItem="ADMIN-TABLE" firstAttribute="leading" secondItem="ADMIN-SAFE" secondAttribute="leading" id="C-A-TL"/>
+                            <constraint firstItem="ADMIN-SAFE" firstAttribute="trailing" secondItem="ADMIN-TABLE" secondAttribute="trailing" id="C-A-TR"/>
+                            <constraint firstItem="ADMIN-TABLE" firstAttribute="top" secondItem="ADMIN-SEG" secondAttribute="bottom" constant="12" id="C-A-TT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ניהול תורים" id="ADMIN-NAV"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="ADMIN-SEG" id="OUT-A-S"/>
+                        <outlet property="tableView" destination="ADMIN-TABLE" id="OUT-A-T"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FR-ADMIN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
